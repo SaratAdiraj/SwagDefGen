@@ -54,7 +54,7 @@
 	}
 }
 		</textarea>
-	  <button type="button" onclick="convert()">Convert</button>
+	  <button type="button" onclick="document.getElementById("Swagger").value = convert(document.getElementById("JSON").value)">Convert</button>
 		<textarea readonly id="Swagger" rows="20" cols="85" placeholder="Here is your Swagger"></textarea>
 		<br>
 		<p>Add values as examples: <input type="checkbox" id="requestExamples"></p>
