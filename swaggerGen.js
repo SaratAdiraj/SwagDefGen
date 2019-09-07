@@ -1,4 +1,4 @@
-function convert() {
+function convert(jsonStr) {
   'use strict';
   // ---- Global variables ----
   var inJSON, outSwagger, tabCount, indentator;
@@ -162,11 +162,10 @@ function convert() {
       return value
     }
   } 
-  
+  inJSON = {};
   // ---- Execution begins here ----
-  inJSON = document.getElementById("JSON").value;
   try {
-    inJSON = JSON.parse(inJSON);
+    inJSON = JSON.parse(jsonStr);
   } catch (e) {
     alert("Your JSON is invalid!\n(" + e +")");
     return;
@@ -193,5 +192,5 @@ function convert() {
   outSwagger += indentator + '}';
 
 
-  document.getElementById("Swagger").value = format(outSwagger, document.getElementById("yamlOut").checked);
+  return format(outSwagger, true);
 }
