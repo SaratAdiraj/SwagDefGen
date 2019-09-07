@@ -1,4 +1,4 @@
-function convert(jsonStr) {
+function convertJsonToSwagger(jsonStr) {
   'use strict';
   // ---- Global variables ----
   var inJSON, outSwagger, tabCount, indentator;
